@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching - Difan Zou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .teaching-header {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+            text-align: center;
+        }
+        .teaching-header h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        .course-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
+            transition: all var(--transition-base);
+        }
+        .course-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+        }
+        .course-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-md);
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+        .course-title h2 {
+            color: var(--primary-dark);
+            margin-bottom: 0.25rem;
+        }
+        .course-code {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .course-semester {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+        }
+        .course-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+        }
+        .course-details {
+            display: flex;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--text-secondary);
+        }
+        .detail-item i {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">Difan Zou</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="group.html">Group</a></li>
+                <li><a href="teaching.html" class="active">Teaching</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Teaching Header -->
+    <section class="teaching-header">
+        <div class="container">
+            <h1>Teaching</h1>
+            <p class="header-subtitle">Courses I teach at The University of Hong Kong</p>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section style="padding: var(--spacing-3xl) 0;">
+        <div class="container">
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-title">
+                        <h2>Theoretical Foundation of Deep Learning</h2>
+                        <p class="course-code">DATA6003</p>
+                    </div>
+                    <div class="course-semester">Fall 2023</div>
+                </div>
+                <p class="course-description">
+                    Deep learning has achieved great success in many real-world applications. However, the reason why deep learning is so powerful remains elusive.
+                    The goal of this course is to introduce theoretical tools and methods that are developed to understand and explain the success of deep learning.
+                    This course covers multiple aspects of machine learning, including landscape analysis, optimization, generalization, and algorithm designs.
+                    Topics include neural tangent kernel (NTK) theory, representation learning, and benign-overfitting of over-parameterized learning models.
+                </p>
+                <div class="course-details">
+                    <div class="detail-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Graduate Level</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-link"></i>
+                        <span><a href="https://difanzou.github.io/teaching/2023-fall-teaching" target="_blank">Course Website</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-title">
+                        <h2>The Age of Big Data</h2>
+                        <p class="course-code">CCST9047</p>
+                    </div>
+                    <div class="course-semester">Spring 2024</div>
+                </div>
+                <p class="course-description">
+                    Explore the critical issues and modern applications of big data in the digital era. This course examines the impact of big data on society and daily life,
+                    while studying proposed solutions in technology, law, and education. Gain insights into data collection, processing, analysis, and visualization.
+                    Investigate ethical and legal considerations, societal implications, and the role of education in navigating this data-driven age.
+                    Engage in hands-on activities and case studies to develop practical skills.
+                </p>
+                <div class="course-details">
+                    <div class="detail-item">
+                        <i class="fas fa-users"></i>
+                        <span>Undergraduate Level</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-link"></i>
+                        <span><a href="https://difanzou.github.io/teaching/2024-spring-teaching" target="_blank">Course Website</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Difan Zou</h3>
+                    <p>Assistant Professor<br>
+                    School of Computing and Data Science<br>
+                    The University of Hong Kong</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="group.html">Research Group</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://scholar.google.com/citations?user=Cp4fcTQAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://twitter.com/difanzou" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:dzou@cs.hku.hk"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Difan Zou. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
