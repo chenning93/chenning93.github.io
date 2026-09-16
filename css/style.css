@@ -319,8 +319,9 @@ section {
     width: 350px;
     height: 350px;
     border-radius: var(--radius-full);
-    object-fit: cover;
-    object-position: center 0%;
+    object-fit: contain;
+    object-position: center;
+    background-color: white;
     box-shadow: var(--shadow-xl);
     position: relative;
     z-index: 2;
