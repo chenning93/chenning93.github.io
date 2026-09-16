@@ -321,7 +321,6 @@ section {
     border-radius: var(--radius-full);
     object-fit: contain;
     object-position: center;
-    background-color: white;
     box-shadow: var(--shadow-xl);
     position: relative;
     z-index: 2;
