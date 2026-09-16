@@ -1,4 +1,4 @@
-# Difan Zou - Academic Homepage
+# Ning Chen - Academic Homepage
 
 A modern, responsive academic homepage built with HTML, CSS, and JavaScript.
 
