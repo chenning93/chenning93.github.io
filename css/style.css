@@ -320,6 +320,7 @@ section {
     height: 350px;
     border-radius: var(--radius-full);
     object-fit: cover;
+    object-position: center 10%;
     box-shadow: var(--shadow-xl);
     position: relative;
     z-index: 2;
