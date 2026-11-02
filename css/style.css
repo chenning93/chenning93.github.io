@@ -778,6 +778,39 @@ section {
     font-weight: 600;
 }
 
+.amp {
+    font-family: var(--font-primary);
+    font-weight: 600;
+}
+
+.award-list li {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: baseline;
+}
+
+.award-year {
+    flex: 0 0 auto;
+    min-width: 4.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-variant-numeric: tabular-nums;
+}
+
+.award-list-columns {
+    columns: 2;
+    column-gap: var(--spacing-xl);
+}
+
+.award-list-columns li {
+    break-inside: avoid;
+}
+
+@media (max-width: 900px) {
+    .award-list-columns { columns: 1; }
+}
+
 .reviewer-sub {
     font-size: 0.8rem;
     font-weight: 600;
@@ -1133,27 +1166,34 @@ section {
     }
 }
 
-@media (max-width: 768px) {
+/* Hamburger menu below 1024px (7 tabs no longer fit on one line) */
+@media (max-width: 1024px) {
     .nav-menu {
-        position: fixed;
-        top: 72px;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
         background-color: white;
         flex-direction: column;
+        gap: var(--spacing-xs);
         padding: var(--spacing-lg);
         box-shadow: var(--shadow-lg);
         transform: translateX(-100%);
-        transition: transform var(--transition-base);
+        visibility: hidden;
+        transition: transform var(--transition-base), visibility var(--transition-base);
     }
 
     .nav-menu.active {
         transform: translateX(0);
+        visibility: visible;
     }
 
     .mobile-menu-btn {
         display: flex;
     }
+}
+
+@media (max-width: 768px) {
 
     .hero-title {
         font-size: 2.5rem;

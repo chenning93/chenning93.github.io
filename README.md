@@ -13,7 +13,7 @@ pages/publications.html Full publication list (search and filters appear once pa
 pages/projects.html     Research projects
 pages/group.html        Group members and open positions
 pages/teaching.html     Teaching
-pages/service.html      Academic service (editorial, organization, reviewing)
+pages/service.html      Awards & Services (fellowships, honours, editorial, reviewing)
 pages/contact.html      Contact details and prospective students
 css/  js/  images/
 ```
