@@ -11,6 +11,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const pubItems = document.querySelectorAll('.pub-item');
     const yearSections = document.querySelectorAll('.year-section');
 
+    // Hide search/filter controls while there are no publications yet
+    const pubControlsBox = document.querySelector('.pub-controls');
+    if (pubControlsBox && pubItems.length === 0) {
+        pubControlsBox.style.display = 'none';
+    }
+
+    // Build the year filter from the year sections on the page
+    if (yearFilter) {
+        const years = [...new Set([...yearSections].map(s => s.dataset.year))]
+            .filter(Boolean)
+            .sort((a, b) => b.localeCompare(a));
+        years.forEach(year => {
+            const option = document.createElement('option');
+            option.value = year;
+            option.textContent = year;
+            yearFilter.appendChild(option);
+        });
+    }
+
     // Search functionality
     if (searchInput) {
         searchInput.addEventListener('input', debounce(filterPublications, 300));
@@ -55,9 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 authors.includes(searchTerm);
 
             // Check year filter
-            const matchesYear = selectedYear === 'all' ||
-                (selectedYear === 'older' && parseInt(itemYear) <= 2018) ||
-                itemYear === selectedYear;
+            const matchesYear = selectedYear === 'all' || itemYear === selectedYear;
 
             // Check type filter
             const matchesType = selectedType === 'all' || itemType === selectedType;
@@ -119,22 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
-    // BibTeX copy functionality
-    function copyBibTeX(pubTitle) {
-        // This would generate and copy BibTeX
-        // For now, just show a message
-        const bibtex = `@article{zou2024${pubTitle.substring(0, 20).toLowerCase().replace(/\s+/g, '')},
-    title={${pubTitle}},
-    author={Zou, Difan and others},
-    journal={Conference},
-    year={2024}
-}`;
-
-        navigator.clipboard.writeText(bibtex).then(() => {
-            alert('BibTeX copied to clipboard!');
-        });
-    }
-
     // Export search results (future feature)
     function exportResults() {
         const visiblePubs = document.querySelectorAll('.pub-item:not(.hidden)');
@@ -151,7 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Make functions available globally if needed
-    window.copyBibTeX = copyBibTeX;
     window.exportResults = exportResults;
 
     // Add export button to page header (optional)

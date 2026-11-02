@@ -182,6 +182,26 @@
     font-weight: 600;
 }
 
+.pub-item .authors {
+    margin-bottom: 0.25rem;
+}
+
+.pub-item .venue {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin: 0;
+}
+
+.pub-item .pub-actions {
+    margin-top: var(--spacing-sm);
+}
+
+.header-subtitle a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
 .pub-actions {
     display: flex;
     gap: var(--spacing-sm);

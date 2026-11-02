@@ -7,12 +7,12 @@
     <meta name="keywords" content="Ning CHEN, IoT, AI for Networking, Multi-agent Cooperation, Topology Optimization">
     <meta name="author" content="Ning CHEN">
 
-    <!-- Open Graph / Social Media -->
+    <!-- Open Graph / Social Media (image must be an absolute URL) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chenning93.github.io/">
-    <meta property="og:title" content="Ning CHEN - Marie Skłodowska-Curie Research Fellow, Uni of Exeter, UK">
+    <meta property="og:title" content="Ning CHEN - Marie Skłodowska-Curie Research Fellow, University of Exeter, UK">
     <meta property="og:description" content="Research in IoT, AI for Networking, Multi-agent Cooperation, Topology Optimization">
-    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:image" content="https://chenning93.github.io/images/profile.png">
 
     <title>Ning CHEN - Marie Skłodowska-Curie Research Fellow</title>
 
@@ -34,7 +34,7 @@
             <div class="nav-brand">
                 <a href="index.html">Ning CHEN</a>
             </div>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -42,7 +42,7 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="pages/publications.html">Publications</a></li>
-                 <li><a href="pages/projects.html">Projects</a></li>
+                <li><a href="pages/projects.html">Projects</a></li>
                 <li><a href="pages/group.html">Group</a></li>
                 <li><a href="pages/teaching.html">Teaching</a></li>
                 <li><a href="pages/contact.html">Contact</a></li>
@@ -56,18 +56,18 @@
             <div class="hero-content">
                 <h1 class="hero-title">Ning CHEN</h1>
                 <div class="hero-subtitle">
-                    <img src="images/exeterlogo.png" alt="UNEXE Logo" class="institution-logo">
+                    <img src="images/exeterlogo.png" alt="University of Exeter logo" class="institution-logo">
                     <div>
                         <p class="position">Marie Skłodowska-Curie Research Fellow</p>
                         <p class="department">Department of Computer Science</p>
                         <p class="institution">The University of Exeter, UK</p>
                     </div>
                 </div>
+                <!-- TODO: review this paragraph and adjust it to your own words -->
                 <p class="hero-description">
-                    I am interested in machine learning, stochastic optimization, and graph learning,
-                    with a special focus on the theoretical and empirical understanding of deep learning,
-                    especially foundation models. I also develop AI/ML methods for practical problems in
-                    signal processing, intelligent transportation, and mathematical challenges.
+                    My research focuses on the Internet of Things (IoT) and AI for networking,
+                    with particular interests in multi-agent cooperative communication and
+                    network topology optimization.
                 </p>
                 <div class="hero-buttons">
                     <a href="pages/publications.html" class="btn btn-primary">View Publications</a>
@@ -75,23 +75,23 @@
                     <a href="#recruitment" class="btn btn-outline">Join My Group</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F4fV4s2ZtM16rYs63k1BAXGQSMkQfQq5Sp0bJa-Gmtgm88xTOOkAwMi3VCacqXveZ61npS2ADkGaflEe8pPkEciMOYrxw&user=QBz7NS0AAAAJ" target="_blank" title="Google Scholar">
+                    <a href="https://scholar.google.com/citations?user=QBz7NS0AAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
                         <i class="fas fa-graduation-cap"></i>
                     </a>
-                    <a href="www.linkedin.com/in/nchen93/" target="_blank" title="Linkedin">
-                        <i class="fab fa-twitter"></i>
+                    <a href="https://www.linkedin.com/in/nchen93/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:n.chen@exeter.ac.uk" title="Email">
+                    <a href="mailto:n.chen@exeter.ac.uk" title="Email" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://github.com/chenning93" target="_blank" title="GitHub">
+                    <a href="https://github.com/chenning93" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="profile-img-wrapper">
-                    <img src="images/profile.jpg" alt="Ning CHEN" class="profile-img">
+                    <img src="images/profile.png" alt="Ning CHEN" class="profile-img" width="350" height="350">
                     <div class="profile-bg-circle"></div>
                 </div>
             </div>
@@ -101,76 +101,36 @@
     <!-- News & Updates Section -->
     <section class="news-section" id="news">
         <div class="container">
-            <h2 class="section-title">Latest News \& Updates</h2>
+            <h2 class="section-title">Latest News &amp; Updates</h2>
 
             <!-- Recruitment Banner -->
             <div class="recruitment-banner" id="recruitment">
                 <i class="fas fa-bullhorn"></i>
                 <div>
                     <strong>Multiple Openings:</strong> PhD, Postdoc, and RA positions available.
-                    Please email me your CV and transcript to chenning@ieee.org or n.chen@exeter.ac.uk.
+                    Please email me your CV and transcript at
+                    <a href="mailto:n.chen@exeter.ac.uk">n.chen@exeter.ac.uk</a> or
+                    <a href="mailto:chenning@ieee.org">chenning@ieee.org</a>.
+                    <a href="pages/group.html#openings">More details</a>
                 </div>
             </div>
 
             <div class="news-timeline">
+                <!--
+                  Add news items here, newest first. Copy this block for each item.
+                  Badge classes: papers | students | award
+
                 <div class="news-item" data-aos="fade-up">
                     <div class="news-date">
-                        <span class="month">Sep</span>
-                        <span class="year">2025</span>
+                        <span class="month">Nov</span>
+                        <span class="year">2026</span>
                     </div>
                     <div class="news-content">
                         <span class="news-badge papers">Papers</span>
-                        <p>Seven papers accepted to NeurIPS 2025</p>
+                        <p>One paper accepted to ...</p>
                     </div>
                 </div>
-
-                <div class="news-item" data-aos="fade-up">
-                    <div class="news-date">
-                        <span class="month">Sep</span>
-                        <span class="year">2025</span>
-                    </div>
-                    <div class="news-content">
-                        <span class="news-badge students">Students</span>
-                        <p>Welcoming new PhD students: Yufei Zhao, Xuan Tang, Bingqing Jiang, Dechen Zhang, and Xu Wang</p>
-                    </div>
-                </div>
-
-                <div class="news-item" data-aos="fade-up">
-                    <div class="news-date">
-                        <span class="month">Aug</span>
-                        <span class="year">2025</span>
-                    </div>
-                    <div class="news-content">
-                        <span class="news-badge papers">Papers</span>
-                        <p>One paper accepted to EMNLP 2025</p>
-                    </div>
-                </div>
-
-                <div class="news-item" data-aos="fade-up">
-                    <div class="news-date">
-                        <span class="month">May</span>
-                        <span class="year">2025</span>
-                    </div>
-                    <div class="news-content">
-                        <span class="news-badge papers">Papers</span>
-                        <p>One paper accepted to ACL 2025 and three papers accepted to ICML 2025</p>
-                    </div>
-                </div>
-
-                <div class="news-item" data-aos="fade-up">
-                    <div class="news-date">
-                        <span class="month">Jun</span>
-                        <span class="year">2024</span>
-                    </div>
-                    <div class="news-content">
-                        <span class="news-badge award">Award</span>
-                        <p>Paper on <a href="https://arxiv.org/pdf/2405.16387">faster diffusion inference/sampling</a> wins Best Paper Award at SPIGM @ ICML workshop</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-more">
-                <button class="btn btn-outline" id="load-more-news">Load More News</button>
+                -->
             </div>
         </div>
     </section>
@@ -182,65 +142,57 @@
             <p class="section-subtitle">Highlights from recent research contributions</p>
 
             <div class="publications-list-simple">
+                <!--
+                  Selected papers (the full list is in pages/publications.html). Copy this block to add one.
+                  Badge colour classes: journal (navy) | conf (teal) | book (purple)
+
                 <div class="pub-item-simple">
-                    <div class="pub-venue-inline"><span class="venue-badge neurips">NeurIPS 2024</span> <span class="award-badge">Spotlight</span></div>
-                    <div class="pub-title-simple">Reverse Transition Kernel: A Flexible Framework to Accelerate Diffusion Inference</div>
-                    <div class="pub-authors-simple">Xunpeng Huang, <strong>Difan Zou</strong>, Hanze Dong, Yi Zhang, Yi-An Ma, Tong Zhang</div>
-                    <div class="pub-links-simple">
-                        <a href="#" class="pub-link-inline"><i class="fas fa-file-pdf"></i> Paper</a>
-                        <a href="https://arxiv.org/pdf/2405.16387" class="pub-link-inline"><i class="fas fa-file-alt"></i> ArXiv</a>
-                    </div>
+                    <div class="pub-venue-inline"><span class="venue-badge journal">TMC 2026</span></div>
+                    <div class="pub-title-simple">Paper title</div>
+                    <div class="pub-authors-simple"><strong>N. Chen</strong>, B. Author, C. Author</div>
+                    <div class="pub-venue-simple">IEEE Transactions on Mobile Computing</div>
+                </div>
+                -->
+                <div class="pub-item-simple">
+                    <div class="pub-venue-inline"><span class="venue-badge journal">TKDE 2026</span></div>
+                    <div class="pub-title-simple">CuIoT: Advancing network connectivity with motif knowledge-centric for robust topology</div>
+                    <div class="pub-authors-simple"><strong>N. Chen</strong>, S. Zhang, X. Zhou, X. Huang, D. O. Wu, T. Qiu</div>
+                    <div class="pub-venue-simple">IEEE Transactions on Knowledge and Data Engineering</div>
                 </div>
 
                 <div class="pub-item-simple">
-                    <div class="pub-venue-inline"><span class="venue-badge icml">ICML 2024</span></div>
-                    <div class="pub-title-simple">What Can Transformer Learn with Varying Depth? Case Studies on Sequence Learning Tasks</div>
-                    <div class="pub-authors-simple">Xingwu Chen, <strong>Difan Zou</strong></div>
-                    <div class="pub-links-simple">
-                        <a href="#" class="pub-link-inline"><i class="fas fa-file-pdf"></i> Paper</a>
-                        <a href="https://arxiv.org/pdf/2404.01601.pdf" class="pub-link-inline"><i class="fas fa-file-alt"></i> ArXiv</a>
-                    </div>
+                    <div class="pub-venue-inline"><span class="venue-badge journal">TSMC 2026</span></div>
+                    <div class="pub-title-simple">Lego-motif: Enhancing IoT topology robustness with evolutionary motif-based generation</div>
+                    <div class="pub-authors-simple"><strong>N. Chen</strong>, T. Qiu, X. Zhou, S. Zhang, W. Si, X. Wang</div>
+                    <div class="pub-venue-simple">IEEE Transactions on Systems, Man, and Cybernetics: Systems</div>
                 </div>
 
                 <div class="pub-item-simple">
-                    <div class="pub-venue-inline"><span class="venue-badge iclr">ICLR 2024</span> <span class="award-badge">Spotlight</span></div>
-                    <div class="pub-title-simple">How Many Pretraining Tasks Are Needed for In-Context Learning of Linear Regression?</div>
-                    <div class="pub-authors-simple">Jingfeng Wu, <strong>Difan Zou</strong>, Zixiang Chen, Vladimir Braverman, Quanquan Gu, Peter L. Bartlett</div>
-                    <div class="pub-links-simple">
-                        <a href="#" class="pub-link-inline"><i class="fas fa-file-pdf"></i> Paper</a>
-                        <a href="https://arxiv.org/pdf/2310.08391.pdf" class="pub-link-inline"><i class="fas fa-file-alt"></i> ArXiv</a>
-                    </div>
+                    <div class="pub-venue-inline"><span class="venue-badge journal">TMC 2025</span></div>
+                    <div class="pub-title-simple">Fast robustness enhancement for dynamic IIoT topology with adaptive Bayesian learning</div>
+                    <div class="pub-authors-simple"><strong>N. Chen</strong>, S. Zhang, X. Zhou, S. Cao, T. Qiu</div>
+                    <div class="pub-venue-simple">IEEE Transactions on Mobile Computing, 24(10), 10886–10899</div>
                 </div>
 
                 <div class="pub-item-simple">
-                    <div class="pub-venue-inline"><span class="venue-badge icml">ICML 2023</span></div>
-                    <div class="pub-title-simple">The Benefits of Mixup for Feature Learning</div>
-                    <div class="pub-authors-simple"><strong>Difan Zou</strong>, Yuan Cao, Yuanzhi Li, Quanquan Gu</div>
-                    <div class="pub-links-simple">
-                        <a href="#" class="pub-link-inline"><i class="fas fa-file-pdf"></i> Paper</a>
-                        <a href="https://arxiv.org/pdf/2303.08433.pdf" class="pub-link-inline"><i class="fas fa-file-alt"></i> ArXiv</a>
-                    </div>
+                    <div class="pub-venue-inline"><span class="venue-badge journal">ToN 2024</span></div>
+                    <div class="pub-title-simple">A distributed co-evolutionary optimization method with motif for large-scale IoT robustness</div>
+                    <div class="pub-authors-simple"><strong>N. Chen</strong>, T. Qiu, X. Zhou, S. Zhang, W. Si, D. O. Wu</div>
+                    <div class="pub-venue-simple">IEEE/ACM Transactions on Networking, 32(5), 4085–4098</div>
                 </div>
 
                 <div class="pub-item-simple">
-                    <div class="pub-venue-inline"><span class="venue-badge iclr">ICLR 2023</span></div>
-                    <div class="pub-title-simple">Understanding the Generalization of Adam in Learning Neural Networks with Proper Regularization</div>
-                    <div class="pub-authors-simple"><strong>Difan Zou</strong>, Yuan Cao, Yuanzhi Li, Quanquan Gu</div>
-                    <div class="pub-links-simple">
-                        <a href="#" class="pub-link-inline"><i class="fas fa-file-pdf"></i> Paper</a>
-                        <a href="https://arxiv.org/pdf/2108.11371.pdf" class="pub-link-inline"><i class="fas fa-file-alt"></i> ArXiv</a>
-                    </div>
+                    <div class="pub-venue-inline"><span class="venue-badge journal">ToN 2021</span></div>
+                    <div class="pub-title-simple">An adaptive robustness evolution algorithm with self-competition and its 3D deployment for Internet of Things</div>
+                    <div class="pub-authors-simple"><strong>N. Chen</strong>, T. Qiu, Z. Lu, D. O. Wu</div>
+                    <div class="pub-venue-simple">IEEE/ACM Transactions on Networking, 30(1), 368–381</div>
                 </div>
 
                 <div class="pub-item-simple">
-                    <div class="pub-venue-inline"><span class="venue-badge neurips">NeurIPS 2019</span></div>
-                    <div class="pub-title-simple">Layer-Dependent Importance Sampling for Training Deep and Large Graph Convolutional Networks</div>
-                    <div class="pub-authors-simple"><strong>Difan Zou*</strong>, Ziniu Hu*, Yewen Wang, Song Jiang, Yizhou Sun, Quanquan Gu</div>
-                    <div class="pub-links-simple">
-                        <a href="#" class="pub-link-inline"><i class="fas fa-file-pdf"></i> Paper</a>
-                        <a href="https://arxiv.org/pdf/1911.07323.pdf" class="pub-link-inline"><i class="fas fa-file-alt"></i> ArXiv</a>
-                        <a href="https://github.com/acbull/LADIES" class="pub-link-inline"><i class="fab fa-github"></i> Code</a>
-                    </div>
+                    <div class="pub-venue-inline"><span class="venue-badge journal">COMST 2018</span></div>
+                    <div class="pub-title-simple">How can heterogeneous internet of things build our future: A survey</div>
+                    <div class="pub-authors-simple">T. Qiu, <strong>N. Chen</strong>, K. Li, M. Atiquzzaman, W. Zhao</div>
+                    <div class="pub-venue-simple">IEEE Communications Surveys &amp; Tutorials, 20(3), 2011–2027</div>
                 </div>
             </div>
 
@@ -253,35 +205,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Ning CHEN</h3>
-                    <p>Marie Skłodowska-Curie Research Fellow<br>
-                    Department of Computer Science<br>
-                    The University of Exeter</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="pages/publications.html">Publications</a></li>
-                          <li><a href="pages/projects.html">Projects</a></li>
-                        <li><a href="pages/group.html">Research Group</a></li>
-                        <li><a href="pages/teaching.html">Teaching</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <div class="footer-social">
-                        <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F4fV4s2ZtM16rYs63k1BAXGQSMkQfQq5Sp0bJa-Gmtgm88xTOOkAwMi3VCacqXveZ61npS2ADkGaflEe8pPkEciMOYrxw&user=QBz7NS0AAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-                        <a href="https://www.linkedin.com/in/nchen93/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:n.chen@exeter.ac.uk"><i class="fas fa-envelope"></i></a>
-                        <a href="https://github.com/chenning93" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Ning CHEN. All rights reserved.</p>
+                <p>&copy; 2026 Ning CHEN</p>
             </div>
         </div>
     </footer>
@@ -291,12 +216,6 @@
 
     <!-- Simple scroll animation -->
     <script>
-        // Simple AOS-like animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -304,7 +223,7 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('[data-aos]').forEach(el => {

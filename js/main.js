@@ -1,4 +1,4 @@
-// Main JavaScript for Difan Zou's Homepage
+// Main JavaScript for Ning CHEN's homepage
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
@@ -31,19 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('scrolled');
         }
     });
-
-    // Load More News functionality
-    const loadMoreBtn = document.getElementById('load-more-news');
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function() {
-            // This would typically load more news items
-            // For now, we'll just hide the button
-            this.style.display = 'none';
-
-            // You could add AJAX call here to load more news
-            alert('Loading more news... (This would fetch additional news items in a real implementation)');
-        });
-    }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -87,12 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 });
-
-// CV Page - Download functionality
-function downloadCV() {
-    // This would trigger CV download
-    alert('CV download would be triggered here. Please add a PDF link.');
-}
 
 // Utility function to format dates
 function formatDate(dateString) {

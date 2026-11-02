@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Difan Zou</title>
+    <title>Contact - Ning CHEN</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -59,16 +59,6 @@
         .contact-details a {
             color: var(--primary-color);
         }
-        .map-placeholder {
-            background-color: var(--bg-tertiary);
-            border-radius: var(--radius-lg);
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 3rem;
-        }
         .office-hours {
             background-color: var(--bg-secondary);
             border: 1px solid var(--border-color);
@@ -109,9 +99,9 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <div class="nav-brand">
-                <a href="../index.html">Difan Zou</a>
+                <a href="../index.html">Ning CHEN</a>
             </div>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -119,6 +109,7 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="group.html">Group</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
@@ -148,7 +139,8 @@
                         </div>
                         <div class="contact-details">
                             <h3>Email</h3>
-                            <p><a href="mailto:dzou@cs.hku.hk">dzou@cs.hku.hk</a></p>
+                            <p><a href="mailto:n.chen@exeter.ac.uk">n.chen@exeter.ac.uk</a><br>
+                            <a href="mailto:chenning@ieee.org">chenning@ieee.org</a></p>
                         </div>
                     </div>
 
@@ -158,9 +150,10 @@
                         </div>
                         <div class="contact-details">
                             <h3>Office Location</h3>
-                            <p>School of Computing and Data Science<br>
-                            The University of Hong Kong<br>
-                            Pokfulam, Hong Kong</p>
+                            <!-- TODO: add your building and room number -->
+                            <p>Department of Computer Science<br>
+                            University of Exeter, Streatham Campus<br>
+                            Exeter, United Kingdom</p>
                         </div>
                     </div>
 
@@ -171,40 +164,36 @@
                         <div class="contact-details">
                             <h3>Online</h3>
                             <p>
-                                <a href="https://scholar.google.com/citations?user=Cp4fcTQAAAAJ&hl=en" target="_blank">Google Scholar</a> •
-                                <a href="https://twitter.com/difanzou" target="_blank">Twitter</a> •
-                                <a href="https://github.com/difanzou" target="_blank">GitHub</a>
+                                <a href="https://scholar.google.com/citations?user=QBz7NS0AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> &bull;
+                                <a href="https://www.linkedin.com/in/nchen93/" target="_blank" rel="noopener">LinkedIn</a> &bull;
+                                <a href="https://github.com/chenning93" target="_blank" rel="noopener">GitHub</a>
                             </p>
                         </div>
                     </div>
 
                     <div class="office-hours">
-                        <h3>Office Hours</h3>
+                        <h3>Meetings</h3>
                         <ul>
                             <li><i class="fas fa-clock"></i> By appointment - please email to schedule</li>
-                            <li><i class="fas fa-info-circle"></i> For prospective students: Please include CV and transcript</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Map or Additional Info -->
+                <!-- Prospective Students -->
                 <div>
-                    <h2>Location</h2>
-                    <div class="map-placeholder">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-
-                    <div class="office-hours" style="margin-top: var(--spacing-lg);">
-                        <h3>Prospective Students</h3>
+                    <h2>Prospective Students</h2>
+                    <div class="office-hours" style="margin-top: 0;">
                         <p style="color: var(--text-secondary); line-height: 1.7;">
-                            I'm always looking for motivated PhD students and postdocs interested in machine learning theory,
-                            deep learning, optimization, and graph learning. If you're interested in joining my group:
+                            I'm looking for motivated PhD students, postdocs and research assistants interested in
+                            the Internet of Things, AI for networking, multi-agent cooperative communication, and
+                            topology optimization. If you're interested in joining my group:
                         </p>
                         <ul style="margin-top: var(--spacing-md);">
-                            <li><i class="fas fa-check"></i> Email me with your CV and transcript</li>
-                            <li><i class="fas fa-check"></i> PhD applicants: Apply through <a href="https://i.cs.hku.hk/~gradappl/index.html" target="_blank">HKU Graduate Application</a></li>
-                            <li><i class="fas fa-check"></i> Mention specific research interests and relevant experience</li>
+                            <li><i class="fas fa-check"></i> Email me your CV and transcript</li>
+                            <li><i class="fas fa-check"></i> Mention your research interests and relevant experience</li>
+                            <li><i class="fas fa-check"></i> PhD applicants: apply through the <a href="https://www.exeter.ac.uk/study/pg-research/degrees/computerscience/" target="_blank" rel="noopener">University of Exeter PhD application</a></li>
                         </ul>
+                        <p style="margin: var(--spacing-md) 0 0;"><a href="group.html#openings">See open positions &rarr;</a></p>
                     </div>
                 </div>
             </div>
@@ -214,33 +203,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Difan Zou</h3>
-                    <p>Assistant Professor<br>
-                    School of Computing and Data Science<br>
-                    The University of Hong Kong</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="group.html">Research Group</a></li>
-                        <li><a href="teaching.html">Teaching</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <div class="footer-social">
-                        <a href="https://scholar.google.com/citations?user=Cp4fcTQAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-                        <a href="https://twitter.com/difanzou" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="mailto:dzou@cs.hku.hk"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Difan Zou. All rights reserved.</p>
+                <p>&copy; 2026 Ning CHEN</p>
             </div>
         </div>
     </footer>

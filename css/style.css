@@ -319,8 +319,8 @@ section {
     width: 350px;
     height: 350px;
     border-radius: var(--radius-full);
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;          /* fill the circle, no side gaps */
+    object-position: center top;
     box-shadow: var(--shadow-xl);
     position: relative;
     z-index: 2;
@@ -594,8 +594,31 @@ section {
     font-size: 0.75rem;
     font-weight: 700;
     color: white;
+    background-color: var(--primary-color); /* default for venues without a colour class */
     text-transform: uppercase;
     letter-spacing: 0.025em;
+}
+
+.venue-badge.journal {
+    background-color: var(--primary-color);
+}
+
+.venue-badge.conf {
+    background-color: #0f766e;
+}
+
+.venue-badge.book {
+    background-color: #6d28d9;
+}
+
+.pub-authors-simple {
+    margin-bottom: 0.25rem;
+}
+
+.pub-venue-simple {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-style: italic;
 }
 
 .venue-badge.neurips {
@@ -812,7 +835,37 @@ section {
 .footer {
     background-color: var(--primary-dark);
     color: white;
-    padding: var(--spacing-3xl) 0 var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+}
+
+.footer .footer-bottom {
+    padding-top: 0;
+    border-top: none;
+}
+
+/* ============================================
+   Empty state (sections waiting for content)
+   ============================================ */
+.empty-state {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+    text-align: center;
+    background-color: var(--bg-secondary);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+}
+
+.empty-state p {
+    margin-bottom: var(--spacing-md);
+}
+
+.empty-state .btn {
+    width: auto;
+}
+
+.recruitment-banner a {
+    font-weight: 600;
 }
 
 .footer-content {
