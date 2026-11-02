@@ -36,13 +36,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggleNews = document.getElementById('toggle-news');
     const newsTimeline = document.querySelector('.news-timeline');
     if (toggleNews && newsTimeline) {
-        if (!newsTimeline.querySelector('.news-extra')) {
+        const hiddenCount = newsTimeline.querySelectorAll('.news-extra').length;
+        const moreLabel = 'Show all news (' + hiddenCount + ' more)';
+        if (hiddenCount === 0) {
             toggleNews.parentElement.style.display = 'none';
+        } else {
+            toggleNews.textContent = moreLabel;
         }
         toggleNews.addEventListener('click', function() {
             const expanded = newsTimeline.classList.toggle('expanded');
-            this.textContent = expanded ? 'Show fewer' : 'Show all news';
+            this.textContent = expanded ? 'Show fewer' : moreLabel;
             this.setAttribute('aria-expanded', String(expanded));
+            if (!expanded) {
+                this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     }
 
