@@ -69,6 +69,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* keep anchor targets clear of the sticky navbar */
+[id] {
+    scroll-margin-top: 96px;
+}
+
 body {
     font-family: var(--font-primary);
     color: var(--text-primary);
@@ -541,6 +546,24 @@ section {
 .news-badge.students {
     background-color: #f3e8ff;
     color: #6b21a8;
+}
+
+.news-badge.funding {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.section-title .amp {
+    font-family: var(--font-primary);
+    font-weight: 600;
+}
+
+.news-content p {
+    margin-bottom: 0;
+}
+
+.news-content a {
+    font-weight: 500;
 }
 
 .news-badge.award {
