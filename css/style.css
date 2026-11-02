@@ -181,6 +181,7 @@ section {
 }
 
 .nav-brand a {
+    white-space: nowrap;
     font-size: 1.5rem;
     font-weight: 700;
     font-family: var(--font-display);
@@ -1106,6 +1107,11 @@ section {
 /* ============================================
    Responsive Design
    ============================================ */
+/* 7-tab nav: tighten spacing before the mobile menu kicks in */
+@media (max-width: 1200px) {
+    .nav-menu { gap: var(--spacing-xs); }
+}
+
 @media (max-width: 1024px) {
     .hero-container {
         grid-template-columns: 1fr;
