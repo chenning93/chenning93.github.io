@@ -488,6 +488,33 @@ section {
     text-decoration: underline;
 }
 
+.highlight-banner {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin: calc(-1 * var(--spacing-md)) 0 var(--spacing-xl);
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+    box-shadow: var(--shadow-sm);
+}
+
+.highlight-banner i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.highlight-banner strong {
+    color: var(--primary-dark);
+}
+
+.news-timeline:not(.expanded) .news-extra {
+    display: none;
+}
+
 .news-timeline {
     max-width: 900px;
     margin: 0 auto;

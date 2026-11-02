@@ -32,6 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Show all / fewer news items
+    const toggleNews = document.getElementById('toggle-news');
+    const newsTimeline = document.querySelector('.news-timeline');
+    if (toggleNews && newsTimeline) {
+        if (!newsTimeline.querySelector('.news-extra')) {
+            toggleNews.parentElement.style.display = 'none';
+        }
+        toggleNews.addEventListener('click', function() {
+            const expanded = newsTimeline.classList.toggle('expanded');
+            this.textContent = expanded ? 'Show fewer' : 'Show all news';
+            this.setAttribute('aria-expanded', String(expanded));
+        });
+    }
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
