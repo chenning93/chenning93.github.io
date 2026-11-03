@@ -1,5 +1,22 @@
 // Main JavaScript for Ning CHEN's homepage
 
+// Visit counter in the footer of every page (GoatCounter, no cookies; site code: chenning93).
+// Stays hidden if GoatCounter can't be reached.
+document.addEventListener('DOMContentLoaded', function() {
+    const box = document.getElementById('visit-count');
+    if (!box) return;
+    fetch('https://chenning93.goatcounter.com/counter/TOTAL.json')
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) {
+            document.getElementById('visit-count-value').textContent = d.count;
+            if (String(d.count).replace(/\D/g, '') === '1') {
+                document.getElementById('visit-count-label').textContent = 'visit';
+            }
+            box.hidden = false;
+        })
+        .catch(function () { /* counter unavailable: keep it hidden */ });
+});
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');

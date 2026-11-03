@@ -411,21 +411,6 @@
         });
     </script>
 
-    <!-- Visit counter (GoatCounter, no cookies). Site code: chenning93 -->
-    <script>
-        (function () {
-            fetch('https://chenning93.goatcounter.com/counter/TOTAL.json')
-                .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-                .then(function (d) {
-                    document.getElementById('visit-count-value').textContent = d.count;
-                    if (String(d.count).replace(/\D/g, '') === '1') {
-                        document.getElementById('visit-count-label').textContent = 'visit';
-                    }
-                    document.getElementById('visit-count').hidden = false;
-                })
-                .catch(function () { /* counter unavailable: keep it hidden */ });
-        })();
-    </script>
     <script data-goatcounter="https://chenning93.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
