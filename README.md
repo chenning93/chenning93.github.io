@@ -28,6 +28,24 @@ copy it, fill it in, and remove the "empty-state" box once the section has real 
 - All papers: `pages/publications.html`, one `year-section` per year
 - Projects / members / courses: the matching page in `pages/`
 
+## Travel map
+
+`pages/service.html` has a `window.VISITED_COUNTRIES` list near the bottom.
+Add a country by English name or 2-letter ISO code, with an optional note shown on hover:
+
+```js
+{ country: "Japan", note: "IEEE ICC 2025, Tokyo" },
+```
+
+The map file `images/world-map.svg` is built from Natural Earth 1:50m country
+boundaries (public domain); `js/travel-map.js` colours and labels the countries.
+
+## Visit counter
+
+Every page loads GoatCounter (`chenning93.goatcounter.com`, no cookies); the homepage
+footer shows the total. The count appears once the GoatCounter site exists and
+"Allow adding visitor counts on your website" is enabled in its settings.
+
 ## Preview locally
 
 ```

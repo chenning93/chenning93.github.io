@@ -117,7 +117,7 @@
     </section>
 
     <!-- Awards -->
-    <section class="service-section" style="padding: var(--spacing-2xl) 0 var(--spacing-3xl);">
+    <section class="service-section" style="padding: var(--spacing-2xl) 0 0;">
         <div class="container">
             <h2 class="section-title">Awards</h2>
             <div class="service-grid" style="margin-top: var(--spacing-lg);">
@@ -156,6 +156,35 @@
         </div>
     </section>
 
+    <!-- Travel Map -->
+    <section class="service-section" id="travel" style="padding: var(--spacing-2xl) 0 var(--spacing-3xl);">
+        <div class="container">
+            <h2 class="section-title">Travel Map</h2>
+            <p class="section-subtitle travel-subtitle">Countries I have visited for conferences, research and travel</p>
+            <div class="service-card travel-card">
+                <div id="travel-map" class="travel-map" data-src="../images/world-map.svg" aria-label="World map of countries visited"></div>
+                <div class="travel-summary">
+                    <span><strong id="travel-count">0</strong> countries visited</span>
+                    <ul id="travel-list" class="travel-list"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+      TRAVEL MAP: edit this list to add countries.
+      Use the English country name (e.g. "Japan", "United States", "Singapore") or the
+      2-letter ISO code (e.g. "JP", "US", "SG"). The note is optional and appears on hover.
+    -->
+    <script>
+        window.VISITED_COUNTRIES = [
+            { country: "China", note: "Studied and worked in Dalian, Tianjin and Hong Kong" },
+            { country: "Netherlands", note: "Joint Ph.D., University of Amsterdam (2021–2022)" },
+            { country: "United Kingdom", note: "Marie Skłodowska-Curie Fellow, University of Exeter (2026–)" }
+        ];
+    </script>
+    <script src="../js/travel-map.js" defer></script>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -166,5 +195,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script data-goatcounter="https://chenning93.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
