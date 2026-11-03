@@ -860,8 +860,12 @@ section {
 
 /* Visit counter (footer) */
 .footer-bottom .visit-count {
-    margin-top: 0.25rem;
-    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.footer-bottom .visit-sep {
+    margin: 0 0.625rem;
+    opacity: 0.6;
 }
 
 .footer-bottom .visit-count i {

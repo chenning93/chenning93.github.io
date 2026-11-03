@@ -382,8 +382,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2026 Ning CHEN</p>
-                <p class="visit-count" id="visit-count" hidden><i class="fas fa-eye"></i> <span id="visit-count-value"></span> visits</p>
+                <p>&copy; 2026 Ning CHEN<span class="visit-count" id="visit-count" hidden><span class="visit-sep">·</span><i class="fas fa-eye"></i> <span id="visit-count-value"></span> <span id="visit-count-label">visits</span></span></p>
             </div>
         </div>
     </footer>
@@ -419,6 +418,9 @@
                 .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
                 .then(function (d) {
                     document.getElementById('visit-count-value').textContent = d.count;
+                    if (String(d.count).replace(/\D/g, '') === '1') {
+                        document.getElementById('visit-count-label').textContent = 'visit';
+                    }
                     document.getElementById('visit-count').hidden = false;
                 })
                 .catch(function () { /* counter unavailable: keep it hidden */ });
