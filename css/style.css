@@ -811,6 +811,39 @@ section {
     .award-list-columns { columns: 1; }
 }
 
+/* Experience & Education (homepage) */
+.background-section {
+    background-color: var(--bg-primary);
+    padding: var(--spacing-2xl) 0;
+}
+
+.background-section .section-title {
+    margin-bottom: var(--spacing-lg);
+}
+
+.background-section .service-card {
+    background-color: var(--bg-secondary);
+}
+
+.cv-list li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.cv-list .award-year {
+    min-width: 7rem;
+}
+
+.cv-list strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .cv-list li { flex-direction: column; gap: 0.125rem; }
+    .cv-list .award-year { min-width: 0; }
+}
+
 .reviewer-sub {
     font-size: 0.8rem;
     font-weight: 600;
