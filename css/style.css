@@ -817,6 +817,11 @@ section {
     padding: var(--spacing-2xl) 0;
 }
 
+/* both sections are white: avoid a double gap between them */
+.background-section + .selected-publications {
+    padding-top: var(--spacing-lg);
+}
+
 .background-section .section-title {
     margin-bottom: var(--spacing-lg);
 }
