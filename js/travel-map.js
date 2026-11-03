@@ -63,49 +63,73 @@
         const NS = 'http://www.w3.org/2000/svg';
         const layer = svg.querySelector('.labels');
         const vb = svg.viewBox.baseVal;
+        const BIG = 1500;          // countries at least this large get their name inside the shape
         const placed = [];
-        const overlaps = b => placed.some(o => b.x < o.x + o.width && b.x + b.width > o.x && b.y < o.y + o.height && b.y + b.height > o.y);
+        const hit = (b, o) => b.x < o.x + o.width && b.x + b.width > o.x && b.y < o.y + o.height && b.y + b.height > o.y;
+        const overlaps = b => placed.some(o => hit(b, o));
         const inside = b => b.x >= 2 && b.y >= 2 && b.x + b.width <= vb.width - 2 && b.y + b.height <= vb.height - 2;
-        const OFFSETS = [[0, 0], [0, -16], [0, 16], [22, 0], [-22, 0], [0, -30], [0, 30], [34, -18], [-34, -18], [34, 18], [-34, 18], [0, -44], [0, 44]];
 
-        visited
+        // candidate offsets: outward rings, left/right preferred (labels are wide)
+        const OFFSETS = [];
+        const ANGLES = [0, 180, 90, 270, 30, 150, 210, 330, 60, 120, 240, 300];
+        [8, 14, 22, 32, 44, 58, 74, 92, 112, 134].forEach(r => ANGLES.forEach(deg => {
+            const t = deg * Math.PI / 180;
+            OFFSETS.push([Math.round(r * Math.cos(t)), Math.round(r * Math.sin(t) * 0.7)]);
+        }));
+
+        const anchors = visited
             .map(v => v.paths.reduce((a, b) => (+b.dataset.area > +a.dataset.area ? b : a)))
-            .sort((a, b) => +b.dataset.area - +a.dataset.area)
-            .forEach(p => {
-                const x = +p.dataset.lx, y = +p.dataset.ly;
-                if (+p.dataset.area < 25) {           // tiny country: add a dot so it is visible
-                    const dot = document.createElementNS(NS, 'circle');
-                    dot.setAttribute('cx', x); dot.setAttribute('cy', y); dot.setAttribute('r', 3);
-                    dot.setAttribute('class', 'map-dot');
-                    layer.appendChild(dot);
-                }
-                const text = document.createElementNS(NS, 'text');
-                text.setAttribute('class', 'map-label');
-                text.textContent = p.dataset.name;
-                layer.appendChild(text);
-                let chosen = null;
-                for (const [dx, dy] of OFFSETS) {
-                    const anchor = dx > 0 ? 'start' : dx < 0 ? 'end' : 'middle';
-                    text.setAttribute('text-anchor', anchor);
-                    text.setAttribute('x', x + dx); text.setAttribute('y', y + dy + 4);
-                    const b = text.getBBox();
-                    const box = { x: b.x - 2, y: b.y - 1, width: b.width + 4, height: b.height + 2 };
-                    if (inside(box) && !overlaps(box)) { chosen = { dx, dy, box }; break; }
-                }
-                if (!chosen) {                          // fall back to the centre
-                    text.setAttribute('text-anchor', 'middle');
-                    text.setAttribute('x', x); text.setAttribute('y', y + 4);
-                    const b = text.getBBox(); chosen = { dx: 0, dy: 0, box: b };
-                }
-                placed.push(chosen.box);
-                if (chosen.dx || chosen.dy) {           // leader line from country to label
-                    const line = document.createElementNS(NS, 'line');
-                    line.setAttribute('x1', x); line.setAttribute('y1', y);
-                    line.setAttribute('x2', x + chosen.dx * 0.8); line.setAttribute('y2', y + chosen.dy * 0.8);
-                    line.setAttribute('class', 'map-leader');
-                    layer.insertBefore(line, layer.firstChild);
-                }
-            });
+            .sort((a, b) => +b.dataset.area - +a.dataset.area);
+
+        // keep the highlighted shapes of smaller countries uncovered by any label
+        anchors.forEach(p => {
+            if (+p.dataset.area < BIG && p.dataset.bb) {
+                const [bx, by, bw, bh] = p.dataset.bb.split(',').map(Number);
+                placed.push({ x: bx - 1, y: by - 1, width: bw + 2, height: bh + 2 });
+            }
+        });
+
+        anchors.forEach(p => {
+            const x = +p.dataset.lx, y = +p.dataset.ly;
+            const area = +p.dataset.area;
+            if (area < 25) {                            // tiny country: add a dot so it is visible
+                const dot = document.createElementNS(NS, 'circle');
+                dot.setAttribute('cx', x); dot.setAttribute('cy', y); dot.setAttribute('r', 3);
+                dot.setAttribute('class', 'map-dot');
+                layer.appendChild(dot);
+            }
+            const text = document.createElementNS(NS, 'text');
+            text.setAttribute('class', 'map-label');
+            text.textContent = p.dataset.name;
+            layer.appendChild(text);
+
+            const tryAt = (dx, dy) => {
+                const anchor = dx > 4 ? 'start' : dx < -4 ? 'end' : 'middle';
+                text.setAttribute('text-anchor', anchor);
+                text.setAttribute('x', x + dx); text.setAttribute('y', y + dy + 4);
+                const b = text.getBBox();
+                return { dx, dy, box: { x: b.x - 2, y: b.y - 1, width: b.width + 4, height: b.height + 2 } };
+            };
+
+            let chosen = null;
+            const candidates = area >= BIG ? [[0, 0]].concat(OFFSETS) : OFFSETS;
+            for (const [dx, dy] of candidates) {
+                const c = tryAt(dx, dy);
+                if (inside(c.box) && !overlaps(c.box)) { chosen = c; break; }
+            }
+            if (!chosen) chosen = tryAt(0, -14);        // nowhere free: just above the country
+            placed.push(chosen.box);
+
+            if (area < BIG) {                           // leader line from the country to the label's nearest edge
+                const bx = Math.max(chosen.box.x, Math.min(x, chosen.box.x + chosen.box.width));
+                const by = Math.max(chosen.box.y, Math.min(y, chosen.box.y + chosen.box.height));
+                const line = document.createElementNS(NS, 'line');
+                line.setAttribute('x1', x); line.setAttribute('y1', y);
+                line.setAttribute('x2', bx); line.setAttribute('y2', by);
+                line.setAttribute('class', 'map-leader');
+                layer.insertBefore(line, layer.firstChild);
+            }
+        });
     }
 
     function buildList(visited) {

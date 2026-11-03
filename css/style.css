@@ -928,14 +928,14 @@ section {
     fill: var(--text-primary);
     paint-order: stroke;
     stroke: #ffffff;
-    stroke-width: 3px;
+    stroke-width: 2.5px;
     stroke-linejoin: round;
     pointer-events: none;
 }
 
 .world-map-svg .map-leader {
     stroke: var(--text-secondary);
-    stroke-width: 0.7;
+    stroke-width: 0.6;
     pointer-events: none;
 }
 
