@@ -1143,6 +1143,42 @@ section {
     flex-wrap: wrap;
 }
 
+/* One-sentence highlight and framework figure (homepage selected papers) */
+.pub-summary {
+    margin: var(--spacing-sm) 0 0;
+    padding: 0.625rem 0.875rem;
+    border-left: 3px solid var(--primary-light);
+    background-color: var(--bg-secondary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.pub-figure {
+    margin: var(--spacing-sm) 0 0;
+}
+
+.pub-figure a {
+    display: block;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: #ffffff;
+    padding: var(--spacing-xs);
+    transition: box-shadow var(--transition-base);
+}
+
+.pub-figure a:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.pub-figure img {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
 .pub-link-inline {
     display: inline-flex;
     align-items: center;
