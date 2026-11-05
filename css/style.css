@@ -369,6 +369,12 @@ section {
     text-align: center;
 }
 
+button.btn {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: inherit;
+}
+
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
@@ -1153,6 +1159,66 @@ section {
     color: var(--text-primary);
     font-size: 0.95rem;
     line-height: 1.6;
+}
+
+/* Collapsible framework + highlight, and "show more" for selected papers */
+.publications-list-simple:not(.expanded) .pub-extra {
+    display: none;
+}
+
+.pub-details {
+    margin-top: var(--spacing-xs);
+}
+
+.pub-details > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    background-color: var(--bg-secondary);
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.pub-details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.pub-details > summary:hover {
+    background-color: #dbeafe;
+    border-color: #bfdbfe;
+}
+
+.pub-details > summary i {
+    font-size: 0.7rem;
+    transition: transform var(--transition-base);
+}
+
+.pub-details[open] > summary i {
+    transform: rotate(180deg);
+}
+
+.pub-details .hide-label,
+.pub-details[open] .show-label {
+    display: none;
+}
+
+.pub-details[open] .hide-label {
+    display: inline;
+}
+
+.view-all-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm);
 }
 
 .pub-figure {

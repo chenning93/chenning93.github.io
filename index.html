@@ -310,6 +310,7 @@
             <div class="publications-list-simple">
                 <!--
                   Selected papers: CCF A, first or corresponding author. Copy this block to add one.
+                  Only the first 3 show by default: later papers need class="pub-item-simple pub-extra".
                   Badge colour classes: journal (navy) | conf (teal) | book (purple)
 
                 <div class="pub-item-simple">
@@ -325,8 +326,11 @@
                     <div class="pub-authors-simple">S. Zhang, T. Qiu, <strong>N. Chen*</strong>, X. Wang, X. Zhou, Y. Ji</div>
                     <div class="pub-venue-simple">IEEE Transactions on Mobile Computing</div>
                     <div class="pub-links-simple"><a href="https://doi.org/10.1109/tmc.2026.3740460" class="pub-link-inline" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a></div>
-                    <figure class="pub-figure"><a href="images/papers/quota-tmc2026.png" target="_blank" rel="noopener"><img src="images/papers/quota-tmc2026.png" alt="Framework of: A Multi-Objective Topology Optimization Algorithm With Quantum Behavior for Heterogeneous IoT" loading="lazy"></a></figure>
-                    <p class="pub-summary">Proposes QUOTA, a quantum-inspired multi-objective topology optimization framework that replaces trajectory-driven particle search with probabilistic state-based exploration, plus adaptive aggregation and diversity-aware strategies, to jointly optimize the robustness and communication efficiency of heterogeneous IoT under node failures, improving robustness by up to 46%.</p>
+                    <details class="pub-details">
+                        <summary><i class="fas fa-chevron-down"></i> <span class="show-label">Show framework</span><span class="hide-label">Hide framework</span></summary>
+                        <figure class="pub-figure"><a href="images/papers/quota-tmc2026.png" target="_blank" rel="noopener"><img src="images/papers/quota-tmc2026.png" alt="Framework of: A Multi-Objective Topology Optimization Algorithm With Quantum Behavior for Heterogeneous IoT" loading="lazy"></a></figure>
+                        <p class="pub-summary">Proposes QUOTA, a quantum-inspired multi-objective topology optimization framework that replaces trajectory-driven particle search with probabilistic state-based exploration, plus adaptive aggregation and diversity-aware strategies, to jointly optimize the robustness and communication efficiency of heterogeneous IoT under node failures, improving robustness by up to 46%.</p>
+                    </details>
                 </div>
 
                 <div class="pub-item-simple">
@@ -335,8 +339,11 @@
                     <div class="pub-authors-simple">H. Huang, J. Ye, J. Yang, W. Feng, Z. Li, <strong>N. Chen*</strong></div>
                     <div class="pub-venue-simple">Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2026)</div>
                     <div class="pub-links-simple"><a href="https://doi.org/10.1145/3770855.3818083" class="pub-link-inline" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a></div>
-                    <figure class="pub-figure"><a href="images/papers/aquavit-kdd2026.png" target="_blank" rel="noopener"><img src="images/papers/aquavit-kdd2026.png" alt="Framework of: Aquavit: Ascending Quantization for Communication-Efficient Vast-Scale Distributed Training" loading="lazy"></a></figure>
-                    <p class="pub-summary">Proposes Aquavit, a distributed training framework with an ascending weight-quantization schedule and fractional precision via block-size modulation, to cut the communication bottleneck of training large foundation models without the accuracy loss of static low-bit quantization, reaching up to 2.15× faster time-to-accuracy on 256 GPUs with FP16-level accuracy.</p>
+                    <details class="pub-details">
+                        <summary><i class="fas fa-chevron-down"></i> <span class="show-label">Show framework</span><span class="hide-label">Hide framework</span></summary>
+                        <figure class="pub-figure"><a href="images/papers/aquavit-kdd2026.png" target="_blank" rel="noopener"><img src="images/papers/aquavit-kdd2026.png" alt="Framework of: Aquavit: Ascending Quantization for Communication-Efficient Vast-Scale Distributed Training" loading="lazy"></a></figure>
+                        <p class="pub-summary">Proposes Aquavit, a distributed training framework with an ascending weight-quantization schedule and fractional precision via block-size modulation, to cut the communication bottleneck of training large foundation models without the accuracy loss of static low-bit quantization, reaching up to 2.15× faster time-to-accuracy on 256 GPUs with FP16-level accuracy.</p>
+                    </details>
                 </div>
 
                 <div class="pub-item-simple">
@@ -345,40 +352,52 @@
                     <div class="pub-authors-simple"><strong>N. Chen</strong>, S. Zhang, X. Zhou, X. Huang, D. O. Wu, T. Qiu</div>
                     <div class="pub-venue-simple">IEEE Transactions on Knowledge and Data Engineering, 38(7), 4213–4226</div>
                     <div class="pub-links-simple"><a href="https://doi.org/10.1109/tkde.2026.3677426" class="pub-link-inline" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a></div>
-                    <figure class="pub-figure"><a href="images/papers/cuiot-tkde2026.png" target="_blank" rel="noopener"><img src="images/papers/cuiot-tkde2026.png" alt="Framework of: CuIoT: Advancing network connectivity with motif knowledge-centric for robust topology" loading="lazy"></a></figure>
-                    <p class="pub-summary">Proposes CuIoT-MET, which transfers motif-evolution knowledge from historical optimization processes and guides topology evolution with a new motif-aware robustness metric, to keep customized Industrial IoT device networks connected and resilient.</p>
+                    <details class="pub-details">
+                        <summary><i class="fas fa-chevron-down"></i> <span class="show-label">Show framework</span><span class="hide-label">Hide framework</span></summary>
+                        <figure class="pub-figure"><a href="images/papers/cuiot-tkde2026.png" target="_blank" rel="noopener"><img src="images/papers/cuiot-tkde2026.png" alt="Framework of: CuIoT: Advancing network connectivity with motif knowledge-centric for robust topology" loading="lazy"></a></figure>
+                        <p class="pub-summary">Proposes CuIoT-MET, which transfers motif-evolution knowledge from historical optimization processes and guides topology evolution with a new motif-aware robustness metric, to keep customized Industrial IoT device networks connected and resilient.</p>
+                    </details>
                 </div>
 
-                <div class="pub-item-simple">
+                <div class="pub-item-simple pub-extra">
                     <div class="pub-venue-inline"><span class="venue-badge journal">TMC 2025</span> <span class="rank-badge ccf-a">CCF A</span></div>
                     <div class="pub-title-simple">Fast robustness enhancement for dynamic IIoT topology with adaptive Bayesian learning</div>
                     <div class="pub-authors-simple"><strong>N. Chen</strong>, S. Zhang, X. Zhou, S. Cao, T. Qiu</div>
                     <div class="pub-venue-simple">IEEE Transactions on Mobile Computing, 24(10), 10886–10899</div>
-                    <figure class="pub-figure"><a href="images/papers/fredabl-tmc2025.png" target="_blank" rel="noopener"><img src="images/papers/fredabl-tmc2025.png" alt="Framework of: Fast robustness enhancement for dynamic IIoT topology with adaptive Bayesian learning" loading="lazy"></a></figure>
-                    <p class="pub-summary">Proposes FRED-ABL, which losslessly compresses topologies via auxiliary continuous coding and learns the topology–robustness mapping with adaptive Bayesian learning, to deliver robust topologies for dynamic Industrial IoT within tight time limits where reinforcement-learning methods are too slow.</p>
+                    <details class="pub-details">
+                        <summary><i class="fas fa-chevron-down"></i> <span class="show-label">Show framework</span><span class="hide-label">Hide framework</span></summary>
+                        <figure class="pub-figure"><a href="images/papers/fredabl-tmc2025.png" target="_blank" rel="noopener"><img src="images/papers/fredabl-tmc2025.png" alt="Framework of: Fast robustness enhancement for dynamic IIoT topology with adaptive Bayesian learning" loading="lazy"></a></figure>
+                        <p class="pub-summary">Proposes FRED-ABL, which losslessly compresses topologies via auxiliary continuous coding and learns the topology–robustness mapping with adaptive Bayesian learning, to deliver robust topologies for dynamic Industrial IoT within tight time limits where reinforcement-learning methods are too slow.</p>
+                    </details>
                 </div>
 
-                <div class="pub-item-simple">
+                <div class="pub-item-simple pub-extra">
                     <div class="pub-venue-inline"><span class="venue-badge journal">TMC 2024</span> <span class="rank-badge ccf-a">CCF A</span></div>
                     <div class="pub-title-simple">DAiMo: Motif density enhances topology robustness for highly dynamic scale-free IoT</div>
                     <div class="pub-authors-simple"><strong>N. Chen</strong>, T. Qiu, W. Si, D. O. Wu</div>
                     <div class="pub-venue-simple">IEEE Transactions on Mobile Computing, 24(3), 2360–2375</div>
                     <div class="pub-links-simple"><a href="https://doi.org/10.1109/TMC.2024.3492002" class="pub-link-inline" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a></div>
-                    <figure class="pub-figure"><a href="images/papers/daimo-tmc2024.png" target="_blank" rel="noopener"><img src="images/papers/daimo-tmc2024.png" alt="Framework of: DAiMo: Motif density enhances topology robustness for highly dynamic scale-free IoT" loading="lazy"></a></figure>
-                    <p class="pub-summary">Proposes DAiMo, a distributed dual-layer collaborative-competition strategy guided by motif density, with a motif-based robustness metric, to find topologies that keep highly dynamic scale-free IoT networks connected when nodes fail.</p>
+                    <details class="pub-details">
+                        <summary><i class="fas fa-chevron-down"></i> <span class="show-label">Show framework</span><span class="hide-label">Hide framework</span></summary>
+                        <figure class="pub-figure"><a href="images/papers/daimo-tmc2024.png" target="_blank" rel="noopener"><img src="images/papers/daimo-tmc2024.png" alt="Framework of: DAiMo: Motif density enhances topology robustness for highly dynamic scale-free IoT" loading="lazy"></a></figure>
+                        <p class="pub-summary">Proposes DAiMo, a distributed dual-layer collaborative-competition strategy guided by motif density, with a motif-based robustness metric, to find topologies that keep highly dynamic scale-free IoT networks connected when nodes fail.</p>
+                    </details>
                 </div>
 
-                <div class="pub-item-simple">
+                <div class="pub-item-simple pub-extra">
                     <div class="pub-venue-inline"><span class="venue-badge journal">ToN 2024</span> <span class="rank-badge ccf-a">CCF A</span></div>
                     <div class="pub-title-simple">A distributed co-evolutionary optimization method with motif for large-scale IoT robustness</div>
                     <div class="pub-authors-simple"><strong>N. Chen</strong>, T. Qiu, X. Zhou, S. Zhang, W. Si, D. O. Wu</div>
                     <div class="pub-venue-simple">IEEE/ACM Transactions on Networking, 32(5), 4085–4098</div>
                     <div class="pub-links-simple"><a href="https://doi.org/10.1109/TNET.2024.3407769" class="pub-link-inline" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a></div>
-                    <figure class="pub-figure"><a href="images/papers/dacmotif-ton2024.png" target="_blank" rel="noopener"><img src="images/papers/dacmotif-ton2024.png" alt="Framework of: A distributed co-evolutionary optimization method with motif for large-scale IoT robustness" loading="lazy"></a></figure>
-                    <p class="pub-summary">Proposes DAC-Motif, a divide-and-conquer co-evolutionary method that evolves network partitions asynchronously with motifs and merges them, making robustness optimization for ~5,000-device IoT networks 3–4 orders of magnitude faster than centralized evolutionary algorithms while improving robustness by over 10%.</p>
+                    <details class="pub-details">
+                        <summary><i class="fas fa-chevron-down"></i> <span class="show-label">Show framework</span><span class="hide-label">Hide framework</span></summary>
+                        <figure class="pub-figure"><a href="images/papers/dacmotif-ton2024.png" target="_blank" rel="noopener"><img src="images/papers/dacmotif-ton2024.png" alt="Framework of: A distributed co-evolutionary optimization method with motif for large-scale IoT robustness" loading="lazy"></a></figure>
+                        <p class="pub-summary">Proposes DAC-Motif, a divide-and-conquer co-evolutionary method that evolves network partitions asynchronously with motifs and merges them, making robustness optimization for ~5,000-device IoT networks 3–4 orders of magnitude faster than centralized evolutionary algorithms while improving robustness by over 10%.</p>
+                    </details>
                 </div>
 
-                <div class="pub-item-simple">
+                <div class="pub-item-simple pub-extra">
                     <div class="pub-venue-inline"><span class="venue-badge journal">ToN 2021</span> <span class="rank-badge ccf-a">CCF A</span></div>
                     <div class="pub-title-simple">An adaptive robustness evolution algorithm with self-competition and its 3D deployment for Internet of Things</div>
                     <div class="pub-authors-simple"><strong>N. Chen</strong>, T. Qiu, Z. Lu, D. O. Wu</div>
@@ -388,6 +407,7 @@
             </div>
 
             <div class="view-all-link">
+                <button class="btn btn-outline" id="toggle-pubs" type="button" aria-expanded="false">Show all selected papers</button>
                 <a href="pages/publications.html" class="btn btn-primary">View All Publications <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>

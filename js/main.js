@@ -70,6 +70,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Selected publications: show the first 3, the rest behind a button
+    const togglePubs = document.getElementById('toggle-pubs');
+    const pubList = document.querySelector('.publications-list-simple');
+    if (togglePubs && pubList) {
+        const hiddenPubs = pubList.querySelectorAll('.pub-extra').length;
+        const morePubs = 'Show all selected papers (' + hiddenPubs + ' more)';
+        if (hiddenPubs === 0) {
+            togglePubs.style.display = 'none';
+        } else {
+            togglePubs.textContent = morePubs;
+        }
+        togglePubs.addEventListener('click', function() {
+            const expanded = pubList.classList.toggle('expanded');
+            this.textContent = expanded ? 'Show fewer' : morePubs;
+            this.setAttribute('aria-expanded', String(expanded));
+            if (!expanded) {
+                pubList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    }
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
