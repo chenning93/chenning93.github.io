@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Reset filters
     if (resetButton) {
         resetButton.addEventListener('click', function() {
-            searchInput.value = '';
+            if (searchInput) searchInput.value = '';
             yearFilter.value = 'all';
             typeFilter.value = 'all';
             filterPublications();
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="no-results">
                     <i class="fas fa-search"></i>
                     <h3>No publications found</h3>
-                    <p>Try adjusting your search terms or filters</p>
+                    <p>Try adjusting your filters</p>
                 </div>
             `;
             publicationsContainer.insertAdjacentHTML('beforeend', noResultsHTML);
